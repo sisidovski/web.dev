@@ -1,17 +1,17 @@
 ---
-title: Using the Event Conversion Measurement API
-subhead: Must-dos and tips to use the Event Conversion Measurement API.
+title: Using the Attribution Reporting API
+subhead: Must-dos and tips to use the Attribution Reporting API.
 authors:
   - maudn
 hero: hero.jpg
 date: 2020-11-12
-#updated: 2020-11-12
+updated: 2020-02-25
 tags:
   - blog
   - privacy
 ---
 
-The [Event Conversion Measurement API](/conversion-measurement) measures when an ad click leads to a
+The [Attribution Reporting API](/conversion-measurement) reports when an ad click leads to a
 conversion, without using cross-site identifiers. Here, you'll find must-dos and tips to use this
 API locally or as an experiment for your end users.
 
@@ -24,7 +24,7 @@ simple end-to-end implementation example.
 
 ## Browser support
 
-The Event Conversion Measurement API can be supported:
+The Attribution Reporting API can be supported:
 
 - As an [origin trial](/origin-trials/), from Chrome 86 beta to Chrome 88 (February 2021). Origin
   trials enable the API for **all visitors** of a given [origin](/same-site-same-origin/#origin).
@@ -37,9 +37,9 @@ entry](https://chromestatus.com/feature/6412002824028160).
 
 ### When is the API available?
 
-For the conversion measurement API to be available on a page, it needs to be:
+For the Attribution Reporting API to be available on a page, it needs to be:
 
-- Enabled on the **origin**. 
+- Enabled on the **origin**.
 - AND—this is specific to this API—Enabled on the **browser**.
 
 To enable the API on **an origin** for end users, an [origin trial
@@ -61,7 +61,7 @@ instance, for example for [development purposes](/#develop-locally), turn on the
 **Why isn't an origin trial token enough for the API to be available on a page?**
 Origin trial features shouldn't exceed a small percentage of global page loads, because they're
 ephemeral. Because of this, sites that have registered for origin trials typically need to
-selectively enable API usage for small portions of their users. But the Event Conversion Measurement
+selectively enable API usage for small portions of their users. But the Attribution Reporting
 API involves actions on different top-level pages—so it can be difficult to consistently divert a
 user into an experiment group across sites to avoid this usage limit. To make this easier for
 developers, Chrome **automatically applies a diversion for this API**. This way, sites can use
@@ -139,10 +139,10 @@ necessary, follow these steps:
   `impressionexpiry`).
 - Additionally, if your ad tag is included in an iframe, you need to add a
   [Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy) for those ads to
-  support conversion measurement, as follows:
+  support attribution reporting, as follows:
 
   ```html/0
-  <iframe src="..." allow="conversion-measurement">
+  <iframe src="..." allow="attribution-reporting">
     <a impressiondata="..."></a>
   </iframe>
   ```

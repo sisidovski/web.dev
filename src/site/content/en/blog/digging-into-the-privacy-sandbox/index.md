@@ -76,7 +76,7 @@ Enable an origin that trusts a user to issue them with cryptographic tokens whic
 Allow related domain names owned by the same entity to declare themselves as belonging to the same first party.
 * [Aggregated Reporting](https://github.com/csharrison/aggregate-reporting-api)<br>
 Provide privacy preserving mechanisms to support a variety of use cases such as view-through-conversion, brand, lift, and reach measurement.
-* [Click Through Conversion Measurement Event-Level](https://github.com/csharrison/conversion-measurement-api)<br>
+* [Attribution Reporting](https://github.com/WICG/conversion-measurement-api)<br>
 Provide privacy preserving [click-through-conversion](#glossary-ctc) measurement.
 * [Federated Learning of Cohorts](https://github.com/jkarlin/floc)<br>
 The browser groups together many users with similar browsing histories into a group (or "cohort"). Advertisers can select ads for this large group based on mass observations, but cannot recognize individual people in it.
@@ -93,7 +93,7 @@ You can dive into the API proposal explainers right away, and over the coming mo
 
 There are two proposals for APIs where information about ad impressions and conversions stays inside the browser, and which only offer carefully controlled, privacy-safe ways for that information to get back to advertisers. This controlled, privacy-safe reporting is done in a way that does not enable linking of identities across sites or collection of user browsing history:
 
-* [Click Through Conversion Measurement Event-Level](https://github.com/csharrison/conversion-measurement-api) allows advertisers to determine which ad clicks later turned into conversions. (API name suggestions welcome!)
+* [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api) allows advertisers to determine which ad clicks later turned into conversions.
 * [Aggregated Reporting](https://github.com/csharrison/aggregate-reporting-api) aggregates browsing data for multiple sites and multiple users in a single report, while preserving privacy by only allowing aggregate reporting on things that a lot of different people did.
 
 Other companies have been investigating similar ideas, such as Facebook's [Cross-Browser Anonymous Conversion Reporting](https://github.com/w3c/web-advertising/blob/master/cross-browser-anonymous-conversion-reporting.md), Apple's [Ad Click Attribution API](https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/) and Brave's [ad conversion attribution](https://github.com/brave/brave-browser/issues/6536).
