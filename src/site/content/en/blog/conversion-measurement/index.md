@@ -545,10 +545,9 @@ Once the scheduled time to send the report is reached, the browser sends the **a
 it sends an HTTP POST to the reporting origin that was specified in the `<a>` element
 (`adtech.example`):
 
-```
-POST https://adtech.example/.well-known/report-attribution`
-
-body:
+`POST https://adtech.example/.well-known/report-attribution`
+Body:
+```JSON
 {
   "source_event_id": "200400600",
   "trigger_data": "2",
