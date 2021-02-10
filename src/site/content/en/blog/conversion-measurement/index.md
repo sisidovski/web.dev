@@ -542,7 +542,7 @@ the two-day-after-click mark if the browser is running.
 </figure>
 
 Once the scheduled time to send the report is reached, the browser sends the **attribution report**:
-it sends an HTTP POST to the reporting origin that was specified in the `<a>` element
+it sends an HTTP POST to the reporting endpoint that was specified in the `<a>` element
 (`adtech.example`):
 
 `POST https://adtech.example/.well-known/report-attribution`
