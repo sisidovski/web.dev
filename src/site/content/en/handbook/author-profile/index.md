@@ -2,6 +2,7 @@
 layout: handbook
 title: Authors profile
 date: 2019-06-26
+updated: 2021-02-25
 description: |
   Learn how to create an author profile for web.dev.
 ---
@@ -65,6 +66,4 @@ description: |
 
 ## Create a profile image
 1. Select a photo of yourself that clearly shows your face and upper shoulders.
-1. Save two versions of the photo in `/images/authors`:
-    * yourauthorslug.jpg (96 px x 96 px)
-    * yourauthorslug@2x.jpg (192 px x 192 px)
+1. Upload the photo and get a photo URL by following [images and video handbook](/handbook/markup-media/).
